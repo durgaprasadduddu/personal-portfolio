@@ -202,7 +202,7 @@ span {
   content: "";
   background-color: black;
   position: absolute;
-  width: calc(100% + 8px);
+  width: 100%;
   height: 100%;
   border-left: 3px solid black;
   right: -8;
@@ -217,25 +217,29 @@ span {
 @keyframes words {
   0%, 20% {
     content: "Web Developer";
-    width: 100%;
+
   }
   21%, 40% {
     content: "Frontend Developer";
-    width: 100%;
+ 
   }
+  
   41%, 60% {
     content: "Web Designer";
-    width: 100%;
+  
+ 
   }
   61%, 80% {
     content: "React Developer";
-    width: 100%;
+  
   }
+  
   81%, 100% {
     content: "Software developer";
-    width: 100%;
+  
   }
 }
+
 @media (max-width: 1000px) {
   .home {
     gap: 4rem;
