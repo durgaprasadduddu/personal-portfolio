@@ -4,44 +4,299 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Portfolio</title>
-    <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../src/styles/index.css">
 
+    <!-- <script src="./home.html"></script> -->
+    <title>Personal Portfolio</title>
 </head>
 
 <body>
-    <header>
-        <a href="#" class="logo">Prasad</a>
-        <nav>
-            <a href="#" class="active">Home</a>
-            <a href="#">Service</a>
-            <a href="#">Skills</a>
-            <a href="#">Education</a>
-            <a href="#">Resume</a>
-            <a href="#">Projects</a>
-            <a href="#">Contacts</a>
-        </nav>
-    </header>
-    <section class="home">
-        <div class="home-img">
-            <img src="/public/main.png">
-        </div>
-        <div class="home-content">
-            <h1>Hi, it's <span>Prasad</span></h1>
-            <h3 class="typing-text">I,m a <span></span></h3>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem harum magni similique adipisci
-                doloremque dolorum debitis! Recusandae harum tempore ut dolore illo. A blanditiis voluptate
-                exercitationem repellendus soluta amet accusantium?</p>
-            <div class="social-icons">
-                <a href="#"><i class="bi bi-linkedin"></i></a>
-                <a href="#"><i class="bi bi-twitter"></i></a>
-                <a href="#"><i class="bi bi-instagram"></i></a>
-                <a href="#"> <i class="bi bi-github"></i></a>
+    <div class="body-bg">
+        <header>
+            <a href="#" class="logo">Portfolio</a>
+            <nav>
+                <!-- <a href="#" data-page="/public/home.html">Home</a> -->
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#blog">Blog</a>
+                <a href="#resume">Resume</a>
+                <a href="#contacts">Contacts</a>
+            </nav>
+        </header>
+        <section>
+            <!-- Start up home on page -->
+            <div class="main" id="home">
+                <h2 class="name">Prasad Duddu</h2>
+                <h4>Full Stack Developer</h4>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere, totam laborum, sit sint nisi
+                    placeat
+                    error recusandae cupiditate itaque magni nam fugit, nobis animi expedita nesciunt fuga repudiandae?
+                    Facere, quas.</p>
+
+                <div>
+                   <a href="#projects"><button class="btn-view">View My Work</button></a>
+                    <button class="btn-touch">Get in Touch</button>
+                </div>
             </div>
-            <a href="#" class="btn">Hire me</a>
-        </div>
-    </section>
+
+            <div class="circle"></div>
+            <div class="sm-crl"></div>
+            <div class="lg-crl"></div>
+            <div class="blur-box"></div>
+
+            <!-- About Content -->
+
+            <div id="about">
+                <div class="ancor-tags">
+                    <h2 class="title">About Me</h2>
+                </div>
+                <div class="about-content">
+                    <div class="info">
+                        <p>Hello! This is Prasad from Vizag, i am a UI full stack developer with hands of experience in
+                            React.js and i have a Strong knowledge on HTML, CSS, JavaScript and MERN Stack, I have done
+                            some projects with framework of React.ts and React.js and also jQuery, in there i build a
+                            strong skills on those tools and i am ready to learn new things where i join the company.
+                            that's all about me</p>
+                    </div>
+                    <div class="skills">
+                        <div class="skill-details">
+                            <h2 class="skill-name">Frontend Skills:</h2>
+                            <div>
+                                <button class="btn-skill">HTML</button>
+                                <button class="btn-skill">CSS</button>
+                                <button class="btn-skill">JavaScript</button>
+                                <button class="btn-skill">Bootstrap</button>
+                                <button class="btn-skill">TypeScript</button>
+                                <button class="btn-skill">React</button>
+                                <button class="btn-skill">Next.js</button>
+                                <button class="btn-skill">Sass</button>
+                                <button class="btn-skill">jQuery</button>
+                            </div>
+                        </div>
+
+                        <div class="skill-details">
+                            <h2 class="skill-name">Backend Skills: </h2>
+                            <div>
+                                <button class="btn-skill">Node.js</button>
+                                <button class="btn-skill">MangoDB</button>
+                                <button class="btn-skill">MySQL</button>
+                                <button class="btn-skill">Express.js</button>
+                                <button class="btn-skill">REST API's</button>
+                            </div>
+                        </div>
+
+                        <div class="skill-details">
+                            <h2 class="skill-name">Tools / DevOps / Utilities: </h2>
+                            <div>
+                                <button class="btn-skill">GitHub</button>
+                                <button class="btn-skill">Postman</button>
+                                <button class="btn-skill">Firebase</button>
+                                <button class="btn-skill">Render</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- projects tag Content -->
+
+                <div id="projects">
+                    <div class="ancor-tags">
+                        <h2 class="title">Featured Projects</h2>
+                    </div>
+                    <div class="project-row">
+                        <div class="card">
+                            <div alt="" class="prjoect-img"></div>
+                            <div class="card-header">
+                                <h2 class="project-title">Video Project like Youtube</h2>
+                            </div>
+                            <div class="card-body">
+                                <div class="description">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla delectus ipsa
+                                    temporibus, facere id deserunt nemo recusandae nihil voluptatum dolorem itaque quis!
+                                </div>
+                                <div>
+                                    <button class="btn-used-skill">React</button>
+                                    <button class="btn-used-skill">TypeScript</button>
+                                    <button class="btn-used-skill">Boots</button>
+                                    <button class="btn-used-skill">Expre</button>
+                                    <button class="btn-used-skill">API</button>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <div>
+                                    <button class="btn-demo">Live Demo</button>
+                                    <button class="btn-github">GitHub</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- </div> -->
+
+                        <!-- second project -->
+                        <div class="card">
+                            <div alt="" class="prjoect-img"></div>
+                            <div class="card-header">
+                                <h2 class="project-title">E-Commerce Shopping</h2>
+                            </div>
+                            <div class="card-body">
+                                <div class="description">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla delectus ipsa
+                                    temporibus, facere id deserunt nemo recusandae nihil voluptatum dolorem itaque quis!
+                                </div>
+                                <div>
+                                    <button class="btn-used-skill">React</button>
+                                    <button class="btn-used-skill">TypeScript</button>
+                                    <button class="btn-used-skill">Boots</button>
+                                    <button class="btn-used-skill">Expre</button>
+                                    <button class="btn-used-skill">API</button>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <div>
+                                    <button class="btn-demo">Live Demo</button>
+                                    <button class="btn-github">GitHub</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Third Project -->
+                        <div class="card">
+                            <div alt="" class="prjoect-img"></div>
+                            <div class="card-header">
+                                <h2 class="project-title">To-Do Appointments</h2>
+                            </div>
+                            <div class="card-body">
+                                <div class="description">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla delectus ipsa
+                                    temporibus, facere id deserunt nemo recusandae nihil voluptatum dolorem itaque quis!
+                                </div>
+                                <div>
+                                    <button class="btn-used-skill">React</button>
+                                    <button class="btn-used-skill">TypeScript</button>
+                                    <button class="btn-used-skill">Boots</button>
+                                    <button class="btn-used-skill">Expre</button>
+                                    <button class="btn-used-skill">API</button>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <div>
+                                    <button class="btn-demo">Live Demo</button>
+                                    <button class="btn-github">GitHub</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Blog tag Content -->
+
+                <div id="blog">
+                    <div class="ancor-tags">
+                        <h2 class="title">Latest Blogs Posts</h2>
+                    </div>
+                    <!-- blog cards start -->
+                    <div>
+                         <div class="card">
+                            <div alt="" class="prjoect-img"></div>
+                            <div class="card-header">
+                                <h2 class="project-title">E-Commerce Shopping</h2>
+                            </div>
+                            <div class="card-body">
+                                <div class="description">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla delectus ipsa
+                                    temporibus, facere id deserunt nemo recusandae nihil voluptatum dolorem itaque quis!
+                                </div>
+                                <div>
+                                    <button class="btn-used-skill">React</button>
+                                    <button class="btn-used-skill">TypeScript</button>
+                                    <button class="btn-used-skill">Boots</button>
+                                    <button class="btn-used-skill">Expre</button>
+                                    <button class="btn-used-skill">API</button>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <div>
+                                    <button class="btn-demo">Live Demo</button>
+                                    <button class="btn-github">GitHub</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- resume Content -->
+
+                <div id="resume">
+                    <div class="ancor-tags">
+                        <h2 class="title">Resume</h2>
+                    </div>
+                    <div class="resume-details">
+                        <div class="download-box">
+                            <h2>Download Resume</h2>
+                            <div>Get a complete overview of my experience, skills and achievements.</div>
+                            <div>
+                                <button class="btn-download bi bi-file-earmark-arrow-down-fill"> Download PDF</button>
+                            </div>
+                        </div>
+                        <div class="key-highlights">
+                            <div>🤖 Led development of 15+ high- impact web applications</div>
+                            <div>👾 Led development of 15+ high- impact web applications</div>
+                            <div>🎗️🎏🎈🎈🎨🛒🎀🎯🏆🧩🧬🪝🔗🛡️📞💻📄✒️📌📍 Led development of 15+ high- impact web applications</div>
+                            <div> Led development of 15+ high- impact web applications</div>
+                            <div> Led development of 15+ high- impact web applications</div>
+                            <div> Led development of 15+ high- impact web applications</div>
+                            <div> Led development of 15+ high- impact web applications</div>
+                            <div> Led development of 15+ high- impact web applications</div>
+                            <div> Led development of 15+ high- impact web applications</div>
+                            <div> Led development of 15+ high- impact web applications</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- contacts Content -->
+
+                <div id="contacts">
+                    <div class="ancor-tags">
+                        <h2 class="title">Let's Contact</h2>
+                    </div>
+                    <div class="contact-details">
+                        <div class="mail-box" >
+                            <label for="name">Name</label>
+                            <div>
+                                <input type="text" id="name">
+                            </div>
+                            <label for="email">Email</label>
+                            <div>
+                                <input type="text" id="email">
+                            </div>
+                            <label for="message">Message</label>
+                            <div>
+                                <textarea name="" id="message"> </textarea>
+                            </div>
+                            <div>
+                                <button class="btn-send">Send Message</button>
+                            </div>
+                        </div>
+                        <div class="contact-links">
+                            <h2>Get In Touch</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum maxime laboriosam adipisci saepe facere, nobis dicta debitis eum quidem numquam, exercitationem reprehenderit delectus blanditiis, totam dolorum tempore. Maxime, at harum!</p>
+                            <div class="social-icons">
+                                <a href="#"><i class="bi bi-linkedin"></i></a>
+                                <a href="#"><i class="bi bi-github"></i></a>
+                                <a href="#"><i class="bi bi-envelope-fill"></i></a>
+                                <a href="#"><i class="bi bi-instagram"></i></a>
+                                <a href="https://wa.me/919014621066"><i class="bi bi-whatsapp"></i></a>
+                                <a href="#"><i class="bi bi-telephone-fill"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+        </section>
+        <!-- <script src="./index.js"></script> -->
+    </div>
 </body>
 
 </html>
