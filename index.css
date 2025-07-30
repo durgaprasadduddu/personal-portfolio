@@ -523,14 +523,14 @@ section {
     border-bottom: 0.5rem solid #b74b4b;
   }
 
-  .main{
+  /* .main{
       width: 55%;
-    }
-    /* .about-content{
-      /* flex-direction: column; */
-      /* flex-wrap: wrap; */
+    }  */
+     .about-content{
+       flex-direction: column; 
+       flex-wrap: wrap; 
     
-    /* }  */
+     }  
     .info{
       height: max-content;
       width: 100%;
@@ -542,17 +542,17 @@ section {
       flex-direction: row;
       flex-wrap: wrap;
     } 
-     .card{
+     /* .card{
       width: 45%;
-    }
-    .resume-details{
-      display: flex;
-      flex-direction: row;
-    }
-    /* .contact-details{
+    } */
+    /* .resume-details{
       display: flex;
       flex-direction: row;
     } */
+    .contact-details{
+      display: flex;
+      flex-direction: column;
+    }
 
      .btn-skill{
     margin: 0.4rem;
