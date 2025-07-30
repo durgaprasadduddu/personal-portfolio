@@ -449,12 +449,18 @@ section {
 }
 
   @media screen and (orientation: portrait) {
+    section{
+      width: 100%;
+    }
     .body-bg{
       width: 100%;
       height: 125vh;
     }
     .main{
       width: 100%;
+    }
+    .name{
+      font-size: 2rem;
     }
     .about-content{
       flex-direction: column;
