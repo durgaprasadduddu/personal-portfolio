@@ -1,4 +1,3 @@
-@import url("https://fonts.google.com/specimen/Open+Sans");
 * {
   margin: 0;
   padding: 0;
@@ -11,25 +10,30 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
   width: 100%;
-  height: 100vh;
-  background-color: black;
-  color: #fff;
+  color: #f3f3f3;
   overflow-x: hidden;
 }
 
+.body-bg {
+  height: 100vh;
+  overflow: auto;
+  background-color: #151021;
+  z-index: -1;
+}
+
 header {
-  margin-left: 20px;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  padding: 1rem 9%;
-  background-color: transparent;
-  filter: drop-shadow(10px);
+  padding: 1rem 2%;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: saturate(180%) blur(10px);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -38,7 +42,9 @@ header {
 
 .logo {
   font-size: 3rem;
-  color: #b74b4b;
+  background-image: linear-gradient(to right, #34c8f1 40%, #6d08e9);
+  background-clip: text;
+  color: transparent;
   font-weight: 800;
   cursor: pointer;
   transition: 0.5s ease;
@@ -59,8 +65,382 @@ nav a {
 
 nav a:hover,
 nav a.active {
-  color: #b74b4b;
-  background-color: 3px solid #b74b4b;
+  background-image: linear-gradient(to right, #34c8f1 60%, #9a08e9);
+  background-clip: text;
+  color: transparent;
+}
+
+section {
+  padding: 7em 3em;
+  scroll-margin-top: 100px;
+}
+
+.body-bg::-webkit-scrollbar {
+  width: 0;
+}
+
+.main {
+  padding-top: 10em;
+  width: 35%;
+  scroll-margin-top: 17em;
+}
+
+#about,
+#projects,
+#blog,
+#resume,
+#contacts {
+  margin-top: 15rem;
+  scroll-margin-top: 6.5rem;
+}
+
+.name {
+  background-image: linear-gradient(to left, #6d08e9, #34c8f1 40%);
+  width: 75%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.main h4 {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 2;
+}
+
+.main p {
+  font-size: 1.5em;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+  color: gray;
+}
+
+.btn-view {
+  background-image: linear-gradient(to bottom right, #34c8f1, #7c1f98);
+  -webkit-background-clip: button;
+  background-clip: button;
+  background-color: transparent;
+  color: #fff;
+  padding: 1.3rem 2rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+  border-radius: 1rem;
+  margin-right: 1.2rem;
+  cursor: pointer;
+}
+
+.btn-view:hover {
+  background-image: linear-gradient(to bottom left, #34c8f1, #7c1f98);
+}
+
+.btn-touch {
+  padding: 1.3rem 2rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+  border-radius: 1rem;
+  background-color: rgba(225, 225, 225, 0.1);
+  border: 1px solid lightgray;
+  color: #f3f3f3;
+  backdrop-filter: blur(10px);
+  cursor: pointer;
+}
+
+.btn-touch:hover {
+  background-image: linear-gradient(to bottom left, #34c8f1, #7c1f98);
+  box-shadow: 0px 0px 8px #34c8f1;
+}
+
+.circle {
+  background: rgba(255, 255, 255, 0.025);
+  width: 14rem;
+  height: 14rem;
+  border-radius: 100%;
+  position: absolute;
+  top: 10rem;
+  right: 40rem;
+  filter: blur(1px);
+  pointer-events: none;
+}
+
+.sm-crl {
+  background: rgba(255, 255, 255, 0.025);
+  width: 5rem;
+  height: 5rem;
+  border-radius: 100%;
+  position: absolute;
+  top: 18rem;
+  left: 40rem;
+  filter: blur(1px);
+  pointer-events: none;
+}
+
+.lg-crl {
+  background: rgba(255, 255, 255, 0.025);
+  width: 7rem;
+  height: 7rem;
+  border-radius: 100%;
+  position: absolute;
+  top: 35rem;
+  right: 25rem;
+  filter: blur(1px);
+  pointer-events: none;
+}
+
+.blur-box {
+  position: absolute;
+  /* or relative/absolute based on your container */
+  top: 200px;
+  /* adjust position as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 250px;
+  /* adjust size */
+  height: 250px;
+  border-radius: 50%;
+  /* or 20px for box shape */
+  background: rgba(144, 99, 199, 0.3);
+  /* purple translucent */
+  filter: blur(100px);
+  pointer-events: none;
+}
+
+.ancor-tags {
+  display: flex;
+  justify-content: center;
+}
+
+.about-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 6rem;
+  padding-top: 2rem;
+}
+
+.info {
+  padding: 1.5rem;
+  border: 1px solid rgba(225, 225, 225, 0.1);
+  background: rgba(255, 255, 255, 0.025);
+  line-height: 2.1;
+  font-size: 1.3rem;
+  border-radius: 1rem;
+  width: 80%;
+  height: 200px;
+}
+
+.info:hover {
+  box-shadow: 0px 0px 12px #34f1f1;
+}
+
+.skills {
+  width: 80%;
+  padding: 1.5rem;
+  margin-top: -2rem;
+}
+
+.skill-name {
+  color: #09d6c8;
+  font-size: 2.5rem;
+  margin: 1rem 0;
+}
+
+.btn-skill {
+  font-size: 1.5rem;
+  margin: 1rem;
+  border: 1px solid gray;
+  border-radius: 1rem;
+  background-color: rgba(225, 225, 225, 0.1);
+  color: #fff;
+  padding: 0.6rem 1.3rem;
+}
+
+.title {
+  font-size: 3.5rem;
+  margin: 2rem 0;
+  background-image: linear-gradient(to left, #6d08e9, #34c8f1 60%);
+  color: transparent;
+  background-clip: text;
+}
+
+.project-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card {
+  width: 30%;
+  cursor: pointer;
+  border: 1px solid #424242;
+  background-color: rgba(225, 225, 225, 0.1);
+  border-radius: 1rem;
+  padding: 2rem;
+  margin: 1.5rem 1rem;
+}
+
+.card:hover {
+  box-shadow: 0px 0px 12px #34f1f1;
+}
+
+.prjoect-img {
+  width: 100%;
+  height: 16.5rem;
+  background-color: rgba(66, 61, 69, 0.292);
+  outline: none;
+}
+
+.card-header {
+  margin: 1.5rem 0;
+}
+
+.project-title {
+  font-size: 2rem;
+}
+
+.card-body {
+  line-height: 1.5;
+  font-size: 1.5rem;
+}
+
+.description {
+  color: #7c7979;
+  margin: 1rem 0rem;
+}
+
+.btn-used-skill {
+  padding: 1rem 1.5rem;
+  margin: 0.4rem 0;
+  text-align: center;
+  color: #34f1f1;
+  border-radius: 0.4rem;
+  background-color: rgba(225, 225, 225, 0.1);
+}
+
+.card-footer {
+  margin: 1.5rem 0;
+}
+
+.btn-demo {
+  cursor: pointer;
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  background-color: rgba(225, 225, 225, 0.1);
+  border: 1px solid #34f1f1;
+  border-radius: 0.4rem;
+  color: #34f1f1;
+}
+
+.btn-github {
+  cursor: pointer;
+  margin-left: 2rem;
+  background-color: #34f1f1;
+  padding: 1rem 2rem;
+  border-radius: 0.3rem;
+}
+
+.btn-demo:hover {
+  box-shadow: 0px 0px 12px #34f1f1;
+  background-color: #34f1f1;
+  color: #000;
+}
+
+.btn-github:hover {
+  box-shadow: 0px 0px 12px #34f1f1;
+}
+
+.resume-details {
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  grid-gap: 4rem;
+}
+
+.download-box, .key-highlights {
+  cursor: pointer;
+  background-color: rgba(225, 225, 225, 0.1);
+  padding: 2.5rem;
+  line-height: 2;
+  font-size: 1.3rem;
+  border-radius: 1rem;
+}
+
+.download-box {
+  height: max-content;
+}
+
+.download-box:hover, .key-highlights:hover {
+  box-shadow: 0px 0px 12px #34f1f1;
+}
+
+.btn-download, .btn-send {
+  cursor: pointer;
+  margin-top: 1.5rem;
+  background-image: linear-gradient(to bottom right, #34c8f1, #7c1f98);
+  -webkit-background-clip: button;
+  background-clip: button;
+  background-color: transparent;
+  color: #fff;
+  padding: 1.3rem 2rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+  border-radius: 1rem;
+}
+
+.btn-download:hover, .btn-send:hover {
+  background-image: linear-gradient(to bottom left, #34c8f1, #7c1f98);
+}
+
+.contact-details {
+  display: grid;
+  grid-template-columns: 4fr 8fr;
+  grid-gap: 4rem;
+}
+
+.mail-box, .contact-links {
+  cursor: pointer;
+  background-color: rgba(46, 46, 46, 0.249);
+  padding: 2rem 3rem;
+  border-radius: 1rem;
+}
+.mail-box label, .contact-links label {
+  font-size: 2rem;
+  font-weight: 700;
+}
+.mail-box input, .mail-box textarea, .contact-links input, .contact-links textarea {
+  background-color: rgba(58, 56, 59, 0.292);
+  outline: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #fff;
+  padding: 1rem 2rem;
+  margin: 1.5rem 0;
+  width: 40rem;
+  border-radius: 0.4rem;
+}
+.mail-box textarea, .contact-links textarea {
+  columns: 40;
+  height: 12rem;
+  resize: none;
+  line-height: 2;
+}
+
+.btn-send {
+  width: 100%;
+}
+
+.contact-links {
+  height: max-content;
+  line-height: 1.8;
+}
+.contact-links p {
+  font-size: 1.5rem;
+  color: #7b7a7a;
+}
+
+.contact-links:hover, .mail-box:hover {
+  box-shadow: 0px 0px 12px #34f1f1;
 }
 
 @media (max-width: 995px) {
@@ -92,56 +472,6 @@ nav a.active {
     border-bottom: 0.5rem solid #b74b4b;
   }
 }
-section {
-  min-height: 100vh;
-  padding: 5rem 9% 5rem;
-}
-
-.home {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 8rem;
-  background-color: black;
-}
-
-.home .home-content h1 {
-  font-size: 6rem;
-  font-weight: 700;
-  line-height: 1.3;
-}
-
-span {
-  color: #b74b4b;
-}
-
-.home-content h3 {
-  font-size: 4rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-.home-content p {
-  font-size: 1.6rem;
-  line-height: 1.3;
-}
-
-.home-img {
-  border-radius: 50%;
-}
-.home-img img {
-  position: relative;
-  width: 32vw;
-  border-radius: 50%;
-  box-shadow: 0 0 25px solid #b74b4b;
-  cursor: pointer;
-  transition: 0.2s linear;
-}
-
-.home-img img:hover {
-  font-size: 1.8rem;
-  font-weight: 500;
-}
-
 .social-icons a {
   display: inline-flex;
   justify-content: center;
@@ -149,19 +479,19 @@ span {
   width: 4rem;
   height: 4rem;
   background-color: transparent;
-  border: 0.2rem solid #b74b4b;
+  border: 0.2rem solid #34f1f1;
   font-size: 2rem;
   border-radius: 50%;
   margin: 3rem 1.5rem 3rem 0;
   transition: 0.3s ease;
-  color: #b74b4b;
+  color: #34f1f1;
 }
 
 .social-icons a:hover {
   color: black;
   transform: scale(1.3) translateY(-5px);
-  background-color: #b74b4b;
-  box-shadow: 0 0 25px #b74b4b;
+  background-color: #34f1f1;
+  box-shadow: 0 0 25px #34f1f1;
 }
 
 .btn {
@@ -202,7 +532,7 @@ span {
   content: "";
   background-color: black;
   position: absolute;
-  width: 100%;
+  width: calc(100% + 8px);
   height: 100%;
   border-left: 3px solid black;
   right: -8;
@@ -217,29 +547,20 @@ span {
 @keyframes words {
   0%, 20% {
     content: "Web Developer";
-
   }
   21%, 40% {
     content: "Frontend Developer";
- 
   }
-  
   41%, 60% {
     content: "Web Designer";
-  
- 
   }
   61%, 80% {
     content: "React Developer";
-  
   }
-  
   81%, 100% {
     content: "Software developer";
-  
   }
 }
-
 @media (max-width: 1000px) {
   .home {
     gap: 4rem;
