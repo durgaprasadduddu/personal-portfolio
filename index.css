@@ -459,6 +459,10 @@ section {
       width: 100vw;
     }
 
+    nav {
+      display: none;
+    }
+
     .sm-crl{
       display: none;
     }
@@ -552,9 +556,23 @@ section {
     border-bottom: 0.5rem solid #b74b4b;
   }
 
-  /* .main{
-      width: 55%;
-    }  */
+  /* body, html {
+    overflow-x: hidden;
+    width: 100vw;
+  }
+
+  .main {
+    width: 60%;
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .btn-view,
+  .btn-touch {
+    display: block;
+    width: 100%;
+    margin: 1rem auto;
+    } */
      .about-content{
        flex-direction: column; 
        flex-wrap: wrap; 
