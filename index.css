@@ -518,7 +518,15 @@ section {
     }
   }
 
+
 @media (max-width: 995px) {
+  *{
+      box-sizing: border-box;
+      outline: 1px solid red;
+    }
+    .lg-crl{
+      display: none;
+    }
   nav {
     position: absolute;
     display: none;
@@ -585,6 +593,76 @@ section {
     }
 
 }
+
+/* @media screen and (max-height: 500px) and (orientation: landscape) {
+  .project-row {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .card {
+    width: 45%;
+    margin: 1rem;
+  }
+
+  .social-icons a {
+    margin: 1rem;
+  }
+
+  .contact-details {
+    flex-direction: column;
+  }
+} */
+
+
+  @media screen and (max-height: 500px) and (orientation: landscape) {
+  .project-row {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .card {
+    width: 45%;
+    margin: 1rem;
+  }
+
+  .social-icons {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 1rem;
+  }
+
+  .social-icons a {
+    margin: 1rem;
+  }
+
+  .circle,
+  .blur-box,
+  .sm-crl,
+  .lg-crl {
+    display: none;
+  }
+
+  body, html {
+    overflow-x: hidden;
+    width: 100vw;
+  }
+  .main {
+    width: 60%;
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .btn-view,
+  .btn-touch {
+    display: block;
+    width: 100%;
+    margin: 1rem auto;
+  }
+}
+
+
 
 /* normal css */
 .social-icons a {
