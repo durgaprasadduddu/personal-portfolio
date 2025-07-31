@@ -519,10 +519,10 @@ section {
   }
 
 
-@media (max-width: 995px) {
+@media (max-width: 995px)  {
   *{
       box-sizing: border-box;
-      outline: 1px solid red;
+      /* outline: 1px solid red; */
     }
     .lg-crl{
       display: none;
