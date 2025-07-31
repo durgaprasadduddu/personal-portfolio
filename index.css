@@ -449,8 +449,18 @@ section {
 }
 
   @media screen and (orientation: portrait) {
-    body{
+
+    *{
+      box-sizing: border-box;
+      /* outline: 1px solid red; */
+    }
+    html,body{
       overflow-x: hidden;
+      width: 100vw;
+    }
+
+    .sm-crl{
+      display: none;
     }
     section{
       width: 100%;
@@ -464,7 +474,8 @@ section {
       width: 100%;
     }
     .name{
-      font-size: 2rem;
+      font-size: 3rem;
+      background-image: linear-gradient(to left, #a426e8, #34c8f1 50%);
     }
     .about-content{
       flex-direction: column;
