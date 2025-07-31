@@ -452,7 +452,7 @@ section {
 
     *{
       box-sizing: border-box;
-      /* outline: 1px solid red; */
+
     }
     html,body{
       overflow-x: hidden;
@@ -519,7 +519,7 @@ section {
   }
 
 
-@media (max-width: 995px)  {
+@media (max-width: 995px) and (orientation: landscape) {
   *{
       box-sizing: border-box;
       /* outline: 1px solid red; */
