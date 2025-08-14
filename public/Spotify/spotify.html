@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify</title>
+    <link rel="stylesheet" href="../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <style>
+     body {
+        background-color: black;
+        color: white;
+        font-family: arial;
+     }
+     header {
+        display: flex;
+        padding: 10px;
+        background-color: black; 
+     }
+     .bi-spotify {
+        font-size: 30px;
+        margin-right: 30px;
+     }
+     .bi-house-door-fill {
+        font-size: 25px;
+        padding:5px;
+        border-radius: 50%;
+        background-color: rgb(63, 63, 63);
+     }
+     .search-bar {
+        width: 350px;
+        padding: 12px;
+        border: 1px solid gray;
+        border-radius: 25px;
+        margin: -5px 20px 0px 20px;
+     }
+     input {
+        background-color: unset;
+        outline: none;
+        border: none;
+        font-size: 16px;
+        color: gray;
+        width: 200px;
+        margin: 0px 40px 0px 10px;
+     }
+     .bi-inboxes {
+        padding-left: 15px;
+        border-left: 1px solid gray;
+     }
+     .options span {
+        margin: 0px 5px 0px 5px;
+        color: gray;
+        font-size: 14px;
+        font-weight: bold;
+     }
+     .options {
+        padding-right: 20px;
+        border-right: 2px solid white;
+        margin-right: 30px;
+     }
+     .bi-arrow-down-circle {
+        font-size: 25px;
+        margin-right: 20px;
+        color: gray;
+     }
+    .install {
+        display: flex;
+        text-align: center;
+        color: rgb(146, 145, 145);
+        margin-right: 30px;
+    } .sing {
+        font-size: 14px;
+        font-weight: bold;
+        color: grey;
+        margin-right: 30px;
+    }
+    .btn-login, .btn-open {
+        background-color: white;
+        color: black;
+        font-size: 16px;
+        text-align: center;
+        font-weight: bold;
+        padding-top: 5px;
+        width: 100px;
+        height: 40px;
+        border-radius: 20px;
+    }
+    .btn-open, .btn-search {
+        display: none;
+    }
+    section {
+        display: grid;
+        grid-template-columns: 2.8fr 9.2fr;
+        grid-gap: 10px;
+    }
+    .left-panel {
+        height: 70vh;
+        background-color: black;
+        padding: 15px;
+    }
+    main {
+        background-color: rgb(15, 15, 15);
+        height: 85vh;
+        overflow: auto;
+        cursor: pointer;
+    }
+    .left-panel-header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        font-size: 26px;
+        font-weight: bold;
+        color: gray;
+    }
+     .library {
+        font-size: 16px;
+        margin-left: -100px;
+        margin-top: 5px;
+     }
+     .row {
+        padding: 15px;
+        background-color: rgb(28, 25, 25);
+        margin: 5px 2px 10px 2px;
+        border-radius: 10px;
+     }
+     .create {
+        font-size: 20px;
+        font-weight: bold;
+        padding-bottom: 10px;
+     }
+     .support {
+        font-size: 15px;
+        padding-bottom: 20px;
+     }
+     button {
+       border: none;
+       outline: none;
+       border-radius: 20px;
+       padding: 5px;
+       color: black;
+       font-weight: bold;
+     }
+     .left-panel-body {
+        margin: 30px 0px 20px 0px;
+        height: 130px;
+        overflow: auto;
+     }
+     .left-panel-body::-webkit-scrollbar {
+        width: 0;
+     }
+     .left-panel-footer {
+        padding: 5px 0px 5px 20px;
+     }
+     aside {
+        display: flex;
+        flex-wrap: wrap;
+        line-height: 30px;
+        font-size: 15px;
+        color: gray;
+        margin-bottom: 10px;
+     }
+     aside span {
+        padding-right: 20px;
+     } 
+     .btn-lang {
+      padding: 3px;
+        border: 1px solid gray;
+        color: white;
+        font-weight: bold;
+        border-radius: 20px;
+        width: 90px;
+        margin-top: 20px;
+     }
+     .lang {
+        font-size: 15px;
+        padding-left: 10px;
+     }
+     .main-header {
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        background-color: black;
+     }
+     .btn-just {
+      display: none;
+     }
+     .popular-artist {
+         font-size: 25px;
+         font-weight: bold;
+    }
+    .singers-row {
+        display: flex;
+        padding-top: 20px;
+    }
+     .singer-card {
+        height: 230px;
+        width: 155px;
+        margin: 3px 0px 10px 10px;
+        border-radius: 10px;
+        padding: 10px;
+        background-color: black;
+        position: relative;
+     }
+     .img-singer {
+        width: 160px;
+        height: 160px;
+        border-radius: 160px;
+    }
+    .singer-name {
+        font-size: 18px;
+        font-weight: bold;
+        margin: 10px 0px 15px 10px;
+    }
+    .singer-role {
+        margin: 10px 0px 0px 10px;
+        font-size: 14px;
+        color: lightgray;
+    }
+    .play-button {
+        color: green;
+        font-size: 40px;
+        position: absolute;
+        right: 30px;
+        top: 130px;
+    }
+    .song-card, .radio-card {
+        width: 190px;
+        margin: 3px 0px 10px 10px;
+        border-radius: 10px;
+        padding-bottom: 10px;
+        background-color: black;
+        position: relative;
+     }
+     .img-song {
+      width: 178px;
+      height: 150px;
+     }
+     .main-content {
+      padding-bottom: 20px;
+      background-color: rgb(15, 15, 15);
+     }
+     .img-radio {
+      width: 177px;
+      height: 190px;
+     }
+     @media screen and (orientation:portrait){
+         .search-bar, .options, .install, .btn-login, .sing, .bi-house-door-fill, .left-panel {
+            display: none;
+         }
+         header {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            cursor: pointer;
+         }
+         .btn-just, .btn-open, .btn-search {
+            display: inline;
+         }
+         .bi-justify {
+            font-size: 30px;
+            padding: 15px 20px 5px 20px;
+         }
+         .btn-search {
+            font-size: 30px;
+            padding: 15px 20px 5px 20px;
+         }
+         .btn-open {
+            padding: 5px;
+         }
+         section {
+            display: grid;
+            grid-template-columns: 12fr;
+         }
+         main {
+            height: 100vh;
+         }
+         .singers-row {
+            width: 100%;
+            overflow-x: auto;
+            height: 295px;
+            margin-bottom: 0px;
+         }
+         .img-singer {
+            border-radius: 0%;
+         }
+         .singer-card {
+            height: 200px;
+         }
+         body {
+            display: grid;
+            width: 100%;
+            grid-template-columns: 12fr;
+         }
+         .popular-artist {
+            font-size: 16px;
+         }
+     }
+    </style>
+</head>
+<body class="container-fuild">
+    <header>
+        <div><span class="bi bi-spotify"></span></div>
+        <div><span class="bi bi-house-door-fill"></span></div>
+        <div class="search-bar"><span class="bi bi-search"></span><input type="text" placeholder="What do you want toplay?"><span class="bi bi-inboxes"></span></div>
+        <div class="options">
+            <span>Premium</span>
+            <span>Support</span>
+            <span>Download</span>
+        </div>
+        <div class="install"><span class="bi bi-arrow-down-circle"></span><span>Install App</span></div>
+        <div class="sing">Sing up</div>
+        <div class="btn-login"> Log in</div>
+        <div class="btn-just">
+         <span class="btn-search"><span class="bi bi-search"></span></span>
+         <span class="btn-open">Open App</span>
+         <span class="bi bi-justify"></span></div>
+    </header>
+    <section>
+        <div class="left-panel">
+             <div class="left-panel-header">
+                 <span class="bi bi-distribute-horizontal"></span><span class="library">Your Library</span>
+                 <span class="bi bi-plus-lg"></span>
+             </div>
+             <div class="left-panel-body">
+                  <div class="row">
+                    <div class="create">Create your first play list</div>
+                  <div class="support">it's easy, we'll help you</div>
+                  <button class="btn-create">Create Playlist</button>
+                  </div>
+                  <div class="row">
+                    <div class="create">Lets find some Podcasts to follow</div>
+                  <div class="support">We'll keep you updated on new episode</div>
+                  <button class="btn-create">Browse Podcasts</button>
+                  </div>
+             </div>
+             <div class="left-panel-footer">
+                 <aside>
+                    <span>Legal</span>
+                    <span>Safety & Privacy Center</span>
+                    <span>Privacy policy</span>
+                    <span>Cookies</span>
+                    <span>About ads</span>
+                    <span>Accessibility</span>
+                 </aside>
+                    <div>Cookies</div>
+                    <div class="btn-lang"><span class="bi bi-globe"></span><span class="lang">English</span></div>
+             </div>
+        </div>
+        <main>
+         <div class="main-content">
+            <div class="main-header">
+               <div class="popular-artist">Popular Artists</div>
+               <div class="show-all">Show all</div>
+            </div>
+            <div class="singers-row">
+               <div class="singer-card">
+                 <img src="./images/Pritam.png" class="img-singer">
+                 <div class="singer-name">Pritam</div>
+                 <div class="singer-role">Artist</div>
+                 <div class="play-button"><span class="bi bi-play-circle-fill"></span></div>
+               </div>
+               <div class="singer-card">
+                <img src="./images/Rahman.png" class="img-singer">
+                <div class="singer-name">A.R. Rahman</div>
+                <div class="singer-role">Artist</div>
+              </div>
+              <div class="singer-card">
+                <img src="./images/Arjit-Sing.png" class="img-singer">
+                <div class="singer-name">Arjit-Sing</div>
+                <div class="singer-role">Artist</div>
+              </div>
+              <div class="singer-card">
+                <img src="./images/Sachin-Jigar.png" class="img-singer">
+                <div class="singer-name">Sachin-Jigar</div>
+                <div class="singer-role">Artist</div>
+              </div>
+              <div class="singer-card">
+                 <img src="./images/Vishal-Shekhar.png" class="img-singer">
+                 <div class="singer-name">Vishal-Shekhar</div>
+                 <div class="singer-role">Artist</div>
+               </div>
+            </div>
+         </div>
+         <div class="main-content">
+            <div class="main-header">
+               <div class="popular-artist">Popular Album and Singles</div>
+               <div class="show-all">Show all</div>
+            </div>
+            <div class="singers-row">
+               <div class="song-card">
+                 <img src="./images/sanam-teri.png" class="img-song">
+                 <div class="singer-name">Sanam teri Kasam (Origanal motion...</div>
+                 <div class="singer-role">Himesh Reshammiya, Sameer Anjaan, Subrat..</div>
+               </div>
+               <div class="song-card">
+                  <img src="./images/aashioui.png" class="img-song">
+                  <div class="singer-name">Aashiqui 2</div>
+                  <div class="singer-role">Mithon, Ankit Teewari,Jeet Gannguli.</div>
+                </div>
+                <div class="song-card">
+                  <img src="./images/deewani.png" class="img-song">
+                  <div class="singer-name">Yeh Jawaani Hai Deewani</div>
+                  <div class="singer-role">Pritham</div>
+                </div>
+                <div class="song-card">
+                  <img src="./images/glory.png" class="img-song">
+                  <div class="singer-name">Glory</div>
+                  <div class="singer-role">Yo Yo Honey Sing</div>
+                </div>
+                <div class="song-card">
+                  <img src="./images/young-goat.png" class="img-song">
+                  <div class="singer-name">Young G.O.A.T</div>
+                  <div class="singer-role">Cheema Y, Gur Sidhu</div>
+                </div>
+           </div>
+         </div>     
+         <div class="main-content">
+            <div class="main-header">
+               <div class="popular-artist">Popular Radios</div>
+               <div class="show-all">Show all</div>
+            </div>
+            <div class="singers-row">
+               <div class="radio-card">
+                 <img src="./images/Arjit-sing-radio.png" class="img-radio">
+                 <div class="singer-role">With Sachin-Jeegar, Mithoon, Jeet Ganng...</div>
+               </div>
+               <div class="radio-card">
+                  <img src="./images/Diljit Dosanjh.png" class="img-radio">
+                  <div class="singer-role">With Karan Aujla, Shubh, Sidhu Moose..</div>
+                </div>
+                <div class="radio-card">
+                  <img src="./images/Shreya Ghoshal.png" class="img-radio">
+                  <div class="singer-role">With A.R.Rahman, Vishal-Shekhar, Atif...</div>
+                </div>
+                <div class="radio-card">
+                  <img src="./images/Ilaiyaraaja.png" class="img-radio">
+                  <div class="singer-role">With K.J. Yesudas, Uma Ramanan, Malaysia...</div>
+                </div>
+                <div class="radio-card">
+                  <img src="./images/KK-radio.png" class="img-radio">
+                  <div class="singer-role">With Armaan Malik, Atif Aslam, Pritam and more</div>
+                </div>
+           </div>
+         </div>  
+        </main>
+    </section>
+</body>
+</html>

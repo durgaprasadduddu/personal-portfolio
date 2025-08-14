@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css">
+     <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <title>Register</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body class="container-fluid">
+
+    <h1 class="text-center m-4">Naresh Institute and Technologies</h1>
+    <!--Navbar-->
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark my-4 mx-3 rounded">
+
+        <button class="navbar-toggler col-1" data-bs-toggle="collapse" data-bs-target="#navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse row" id="navigation">
+            <ul class="nav navbar-nav navbar-left ms-4">
+                <li class="nav-item"><a class="nav-link bi bi-house-door-fill ms-4" href="./index.html"> Home</a></li>
+                <li class="nav-item"> <a class="nav-link bi bi-question-octagon-fill ms-4" href="./about.html"> About</a></li>
+                <li class="nav-item"><a class="nav-link bi bi-journal-code ms-4" href="./service.html"> Service</a> </li>
+                <li class="nav-item"><a class="nav-link bi bi-phone ms-4" href="./contact.html"> Contact Us</a></li>
+            </ul>
+        </div>
+        <!--Dropdown-->
+                    <div class="dropdown me-2" id="drop">
+            <button class="btn text-white dropdown-toggle" data-bs-toggle="dropdown"> 
+                <span class="bi bi-box-arrow-in-right"></span> Sign in</button>
+            <ul class="dropdown-menu" id="drop-items">
+                <li class="dropdown-item"><a href="./login.html" class="nav-link">
+                    <span class="bi bi-box-arrow-in-right"></span> Sign in</a></li>
+                <li class="dropdown-item"><a href="./register.html" class="nav-link">
+                    <span class="bi bi-person-add"></span> Sign Up</a></li>
+                <li class="dropdown-item"><a href="./password.html" class="nav-link">
+                    <span class="bi bi-lock"></span> Change Password</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="d-flex justify-content-center mt-4 pt-4">
+        <form class="border bg-light rounded p-3 mt-4" style="width: 400px;">
+            <h2>Registration Form</h2>
+
+            <div class="mb-3">
+                <label class="form-label fw-bold" for="name"> Name:</label>
+                <div>
+                    <input type="text" class="form-control" required id="name">
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label fw-bold" for="mail"> Email:</label>
+                <div>
+                    <input type="email" required class="form-control" id="mail">
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label fw-bold" for="mobile"> Mobile:</label>
+                <div>
+                    <input type="number" required class="form-control" id="mobile">
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label fw-bold" for="date"> Date:</label>
+                <div>
+                    <input type="date" required class="form-control" id="date">
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label fw-bold" for="image"> Image:</label>
+                <div>
+                    <input type="file" required accept=".jpg, .png" id="image">
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label fw-bold" for="password"> Password:</label>
+                <div>
+                    <input type="password" required class="form-control" id="password">
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label fw-bold" for="password"> Confirm Password:</label>
+                <div>
+                    <input type="password" required class="form-control" id="password">
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="gender" class="form-check-label fw-bold pe-3"> Gender:</label>
+                    <input type="radio" name="Gender" id="gender" class="form-check-input"> Male
+                    <input type="radio" name="Gender" id="gender" class="form-check-input ms-2"> Female
+            </div>
+            <div>
+                <input type="checkbox" class="form-check-input" required> <span> I've read and Accept the Terms and Conditions</span>
+            </div>
+            <div class="registation-buttons my-4 pt-4 mx-2">
+                <button id="btn-sign-up" class="btn btn-warning text-white"><a href="./login.html" class="nav-link">Already you have an Account</a></button>
+                <button class="btn btn-success ms-4"> Register</button>
+            </div>
+        </form>
+    </section>    
+
+      <!--footer-start-->
+      <footer class="bg-secondary text-light">
+        <h3 class="text-center m-4 p-4">Naresh Technologies</h3>
+        <div class="contact-details">
+            <div>
+                <ul>
+                    <li><span class="bi bi-facebook"></span> Facebook</li>
+                    <li><span class="bi bi-google"></span> Google</li>
+                    <li><span class="bi bi-twitter"></span> Twitter</li>
+                    <li><span class="bi bi-youtube"></span> Youtube</li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Service</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li><b>Name: </b>Naresh Institute</li>
+                    <li><b>Email: </b>info@nareshit.com</li>
+                    <li><b>Contact: </b>+91_xxxxxxxxx</li>
+                    <li><b>Address: </b>Ameerpet, Hyderabad, Telangana</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

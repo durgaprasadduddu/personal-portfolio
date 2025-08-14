@@ -1,0 +1,211 @@
+
+
+#drop {
+    /* margin-left:-45px ; */
+    position: relative;
+}
+#drop-items {
+    position: absolute;
+    left: -60px;
+}
+#service {
+    margin-left: 150px;
+}
+#service-cards {
+    display: flex;
+    justify-content: space-around;
+
+}
+.card {
+    width: 25%;
+}
+#package-paragraph {
+    display: flex;
+    justify-content: center;
+}
+#package-paragraph p {
+    width: 50%;
+    font-size: 18px;
+}
+.table-form {
+    display: flex;
+}
+.typeofjob {
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr 2fr 2fr 2fr;
+    margin: 50px 10px 20px 10px;
+    grid-gap: 10px;
+}
+#detailsofjob~span {
+    display: block;
+}
+.department-details {
+    background-color: rgb(216, 202, 153);
+    padding: 50px;
+}
+.know-details {
+    display: grid;
+    grid-template-columns: 3fr 3fr 3fr 3fr;
+    margin-left: 80px;
+    padding: 50px 10px 80px 10px;
+}
+
+.contact-details {
+    display: grid;
+    grid-template-columns: 4fr 4fr 4fr;
+    padding: 10px 150px 50px 200px;
+}
+.contact-details ul {
+    line-height: 40px;
+}
+footer {
+    margin-top: 60px;
+}
+.circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+}
+.circle span {
+    font-size: 80px;
+    position: relative;
+    left: 0px;
+    top: -30px;
+} 
+.job-info-row1, .job-info-row3 {
+    display: grid;
+    grid-template-columns: 8fr 4fr;
+    font-size: 20px;
+    grid-gap: 5%;
+    margin: 5px 20px 5px 50px;
+}
+.job-info-row2, .job-info-row4 {
+    display: grid;
+    grid-template-columns: 4fr 8fr;
+    font-size: 20px;
+    grid-gap: 5%;
+    margin: 5px 20px 5px 20px;
+}
+.passwoed-display {
+    display: flex;
+    justify-content: center;
+}
+.form-password {
+    width: 25%;
+}
+.contact-main {
+    padding-bottom: 100px;
+    width: 80%;
+    margin: 50px;
+}
+ 
+  .img-cont {
+    width: 500px;
+    height: 300px;
+  }
+  #table-about {
+    width: 98%;
+    margin: 15px;
+  }
+  #table-filter input {
+        color: black;
+        width: 100%;
+  }
+  #table-filter {
+    display: none;
+  }
+@media screen and (orientation:portrait) {
+         
+    #drop-items {
+        position: absolute;
+        left: 5px;
+    }
+    #drop {
+        position: relative;
+    }
+    #package-paragraph {
+        display: grid;
+        grid-template-columns: 12fr;
+    }
+    #package-paragraph p {
+        width: 100%;
+    }
+    .contact-details {
+        display: grid;
+        grid-template-columns: 12fr;
+        padding: 10%;
+    }   
+    #service-cards {
+        display: grid;
+        grid-template-columns: 12fr;
+    }
+    #service {
+        margin-left: 10%;
+    }
+    .card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .contact-details {
+        display: grid;
+        grid-template-columns: 12fr;
+        padding: 10%;
+    }
+    .table-form {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    table {
+        grid-row: 1;
+        margin-left: -22px;
+    }
+    .typeofjob {
+        display: grid;
+        grid-template-columns: 12fr;
+        font-size: 20px;
+    }
+    .know-details {
+        display: grid;
+        grid-template-columns: 12fr;
+    }
+    .job-info-row1, .job-info-row2, .job-info-row3, .job-info-row4 {
+        display: grid;
+        grid-template-columns: 12fr;
+        margin-bottom: 50px;
+    }
+    .job-info-img {
+        width: 100%;
+        grid-row: 2;
+        margin-bottom: 100px;
+    }
+    .passwoed-display {
+        display: grid;
+        grid-template-columns: 12fr;
+    }
+    .form-password {
+        width: 90%;
+    }
+    .registation-buttons {
+        display: grid;
+        grid-template-columns: 12fr;
+    }
+    #btn-sign-up {
+        margin: -10px 0px 20px 10px;
+    }
+    .contact-img {
+        display: grid;
+        grid-template-columns: 12fr;
+    }
+    .img-cont {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .contact-main {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+    #table-about {
+        margin: 20px 0px 10px 0px;
+    }
+}

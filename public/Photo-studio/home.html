@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <title>Murali Photo studio</title>
+    <style>
+     .studio-logo {
+        width: 80px;
+        height: 50px;
+        border-radius: 50px;
+     }
+     .our-sites span { 
+        padding-right: 20px;
+        font-size: 20px;
+     }
+     .our-sites {
+        padding-top: 15px;
+     }
+     .baner {
+        background-size: cover;
+        width: 100%;
+        height: 400px;
+     }
+     a {
+        text-decoration: none;
+        color: black;
+     }
+     .container {
+      width: 250px;
+      height: 300px;
+      border: 1px solid gray;
+      box-shadow: 5px 5px 8px gray;
+      border-radius: 10px;
+      opacity: 1;
+     }
+     .container:hover {
+      opacity: 0.9;
+     }
+     .container-5 {
+      width: 380px;
+      height: 300px;
+      border: 1px solid gray;
+      box-shadow: 5px 5px 8px gray;
+      border-radius: 10px;
+      opacity: 1;
+     }
+     .container-5:hover {
+      opacity: 0.9;
+     }
+     .shoot-pic {
+      width: 100%;
+      height: 250px;
+      border-top-right-radius: 10px;
+      border-top-left-radius: 10px;
+     }
+     .person-shoot {
+      font-size: 20px;
+      text-align: center;
+      padding: 10px 0px;
+     }
+    </style>
+</head>
+<body style="font-family: arial;" id="home">
+    <header style="display: flex; background-color: black; color: white; padding: 10px; justify-content: space-between;">
+      <div>
+        <img src="./Images/studio-logo.jpg" class="studio-logo">
+      </div>
+      <div style="padding-top: 15px; font-family:cursive ;">
+         MURALI PHOTO STUDIO
+      </div>
+      <div class="our-sites">
+          <span class="bi bi-instagram"></span>
+          <span class="bi bi-whatsapp"></span>
+          <span class="bi bi-facebook"></span>
+          <span class="bi bi-telegram"></span>
+      </div>
+    </header>
+    <section>
+        <div style="display: flex; background-color: white; padding: 10px; justify-content: space-evenly; position: sticky; top: 0;">
+            <span><a href="#home">Home</a></span>
+            <span><a href="#shoot">PhotoShoots</a></span>
+            <span><a href="#event">Events</a></span>
+            <span><a href="#passport">PassportSize</a></span>
+            <span><a href="#frame">frames & Albums</a></span>
+            <span><a href="#rent">Camera rents</a></span>
+            <span><a href="#contact">Contact Me</a></span>
+         </div>
+       <div style="background-image: url('./Images/baner.jpg'); height: 440px; overflow: auto;" class="baner">
+         <div style="margin-left: 45%; text-align: center; margin-top: 200px; height: 200px; width: 300px; background-color: rgba(0, 0, 0, 0.3); color: white; border-radius: 10px;">
+            <h2 style="padding-top: 20px;font-family: gabriola; font-size: 25px;">Murali Photo Studio</h2>
+            <p style="font-size: 15px; font-family: Gabriola;margin-top: -20px; padding: 10px;">We are professionals working in visual art and we cater to every aspect of your life. Event documentation / Weddings / Baby Shoots and many more</p>
+            <p style="font-family: Gabriola; margin-top: -10px;">Thank you</p>
+         </div>
+   </div>
+         <div id="shoot">
+           <h2>PhotoShoots</h2>
+           <div style="padding: 20px 40px; display: flex; justify-content: space-around;">
+              <div class="container">
+                   <div> <img src="./Images/men-shoot.jpg" class="shoot-pic"></div>
+                   <div class="person-shoot">Mens PhotoShoot</div>
+              </div>
+              <div class="container">
+                  <div> <img src="./Images/baby-shoot.jpg" class="shoot-pic"></div>
+                  <div class="person-shoot">Babies PhotoShoot</div>
+              </div>
+              <div class="container">
+                  <div> <img src="./Images/women-shoot.jpg" class="shoot-pic"></div>
+                  <div class="person-shoot">Womens PhotoShoot</div>
+              </div>
+           </div>
+           <div style="padding: 20px 40px; display: flex; justify-content: space-around;">
+            <div class="container">
+                 <div> <img src="./Images/marriage.jpg" class="shoot-pic"></div>
+                 <div class="person-shoot">marriage PhotoShoot</div>
+            </div>
+            <div class="container">
+                 <div> <img src="./Images/aniversary.jpg" class="shoot-pic"></div>
+                 <div class="person-shoot">Aniversary PhotoShoot</div>
+            </div>
+            <div class="container">
+                 <div> <img src="./Images/family.jpg" class="shoot-pic"></div>
+                <div class="person-shoot">Family PhotoShoot</div>
+            </div>
+         </div>
+         </div>
+         <div id="event">
+            <h2>Events</h2>
+         </div>
+         <div id="passport">
+            <h2>PassPort Size Photos</h2>
+         </div>
+         <div id="frame">
+           <h2>Frames & Albums</h2>
+         </div>
+         <div id="rent">
+            <h2>Camera Rents</h2>
+            <div style="padding: 20px 10px; display: flex; justify-content: space-between;">
+               <div class="container-5">
+                  <div> <img src="./Images/canon.jpeg" class="shoot-pic"></div>
+                  <div class="person-shoot">Canon Camera</div>
+               </div>
+            <div class="container-5">
+               <div> <img src="./Images/nickon.jpeg" class="shoot-pic"></div>
+               <div class="person-shoot">Nikon Camera</div>
+            </div>
+            <div class="container-5">
+               <div> <img src="./Images/cam-1.jpg" class="shoot-pic"></div>
+               <div class="person-shoot">Camera</div>
+            </div>
+        </div>
+       </div>
+         <div id="contact">
+             <h2>Contact Me</h2>
+         </div>
+    </section>
+    <footer style="text-align: center; background-color: black; color: lightgray; padding: 15px;">
+<div>&copy; Copyrights passed 2025</div>
+    </footer>
+</body>
+</html>

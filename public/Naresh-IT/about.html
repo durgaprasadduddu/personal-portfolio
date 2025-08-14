@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <title>About</title>
+    <link rel="stylesheet" href="./style.css">
+    <script type="text/JavaScript">
+         function Filter() {
+    document.getElementById("table-no-filter").style.display='none';
+     document.getElementById("table-filter").style.display='inline';
+ }
+    </script>
+</head>
+<body class="container-fluid">
+
+    <h1 class="text-center m-4">Naresh Institute and Technologies</h1>
+    <!--Navbar-->
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark my-4 mx-3 rounded">
+
+        <button class="navbar-toggler col-1" data-bs-toggle="collapse" data-bs-target="#navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse row" id="navigation">
+            <ul class="nav navbar-nav navbar-left ms-4">
+                <li class="nav-item"><a class="nav-link bi bi-house-door-fill ms-4" href="./index.html"> Home</a></li>
+                <li class="nav-item"> <a class="nav-link bi bi-question-octagon-fill ms-4" href="./about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link bi bi-journal-code ms-4" href="./service.html"> Service</a></li>
+                <li class="nav-item"><a class="nav-link bi bi-phone ms-4" href="./contact.html"> Contact Us</a></li>
+            </ul>
+        </div>
+        <!--Dropdown-->
+        <div class="dropdown me-2" id="drop">
+            <button class="btn text-white dropdown-toggle" data-bs-toggle="dropdown"> 
+                <span class="bi bi-box-arrow-in-right"></span> Sign in</button>
+            <ul class="dropdown-menu" id="drop-items">
+                <li class="dropdown-item"><a href="./login.html" class="nav-link">
+                    <span class="bi bi-box-arrow-in-right"></span> Sign in</a></li>
+                <li class="dropdown-item"><a href="./register.html" class="nav-link">
+                    <span class="bi bi-person-add"></span> Sign Up</a></li>
+                <li class="dropdown-item"><a href="./password.html" class="nav-link">
+                    <span class="bi bi-lock"></span>Change Password</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section>
+        <main class="container-fluid border" id="table-main">
+
+           <div class="bg-primary p-3">
+            <span class="text-white ">Details</span>
+            <button class="bi bi-funnel-fill float-end" onclick="Filter()">filter</button>
+           </div>
+    <div id="table-no-filter">
+    <table class="table table-bordered" id="table-about">
+        <thead>
+            <tr class="table-success">
+                <th width="30">Id</th>
+                <th>Course Name</th>
+                <th>Faculty Name</th>
+                <th>Duration</th>
+                <th>Timings</th>
+                <th width="120">View</th>
+            </tr>
+          
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Angular 8</td>
+                <td>Sudhakar sharma sir</td>
+                <td>45 days</td>
+                <td>07:30 AM</td>
+                <td><button class="btn btn-warning text-white" data-bs-toggle="modal" data-bs-target="#angular">view <span class="bi bi-eye"></span></button></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Node Js</td>
+                <td>Samba sir</td>
+                <td>45 days</td>
+                <td>09:00 AM</td>
+                <td><button data-bs-toggle="modal" data-bs-target="#nodejs" class="btn btn-warning text-white">view <span class="bi bi-eye"></span></button></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Java</td>
+                <td>Hari Krishna Sir</td>
+                <td>60 days</td>
+                <td>04:30 PM</td>
+                <td><button data-bs-toggle="modal" data-bs-target="#java" class="btn btn-warning text-white">view <span class="bi bi-eye"></span></button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+   <div id="table-filter">
+    <table class="table table-bordered" id="table-about">
+        <thead>
+
+            <tr class="table-success">
+                <th width="30">Id</th>
+                <th><input type="text" placeholder="Course Name"></th>
+                <th><input type="text" placeholder="Faculty Name"></th>
+                <th><input type="text" placeholder="Duration"></th>
+                <th><input type="text" placeholder="Timings"></th>
+                <th width="120">View</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Angular 8</td>
+                <td>Sudhakar sharma sir</td>
+                <td>45 days</td>
+                <td>07:30 AM</td>
+                <td><button class="btn btn-warning text-white" data-bs-toggle="modal" data-bs-target="#angular">view <span class="bi bi-eye"></span></button></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Node Js</td>
+                <td>Samba sir</td>
+                <td>45 days</td>
+                <td>09:00 AM</td>
+                <td><button data-bs-toggle="modal" data-bs-target="#nodejs" class="btn btn-warning text-white">view <span class="bi bi-eye"></span></button></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Java</td>
+                <td>Hari Krishna Sir</td>
+                <td>60 days</td>
+                <td>04:30 PM</td>
+                <td><button data-bs-toggle="modal" data-bs-target="#java" class="btn btn-warning text-white">view <span class="bi bi-eye"></span></button></td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+    </main>
+    <!--Modal for Angular-->
+    <div class="modal fade" id="angular">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="fs-4">Details:</div>
+                    <button class="btn btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <dl class="row">
+                        <dt class="col-3" style="color: rgb(19, 117, 117);">Course :</dt>
+                        <dd class="col-9" style="color: rgb(133, 109, 77);">Angular 8</dd>
+                        <dt class="col-3" style="color: rgb(19, 117, 117);">Faculty :</dt>
+                        <dd class="col-9" style="color: rgb(133, 109, 77);">Sudhakar sharma sir</dd>
+                        <dt class="col-3" style="color: rgb(19, 117, 117);">Duration :</dt>
+                        <dd class="col-9" style="color: rgb(133, 109, 77);">45 days</dd>
+                        <dt class="col-3" style="color: rgb(19, 117, 117);">Timings :</dt>
+                        <dd class="col-9" style="color: rgb(133, 109, 77);">07:30 AM</dd>
+                        <dt class="col-3" style="color: rgb(19, 117, 117);">Description :</dt>
+                        <dd class="col-9" style="line-height: 30px; color: rgb(133, 109, 77);">Angular 8 is a client-side TypeScript based framework which is used to create dynamic web applications. It is very similar to its previous versions except having some extensive features.
+                        </dd>
+                    </dl>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-warning text-white" data-bs-dismiss="modal"><span class="bi bi-x"></span> Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+     <!--Modal for Node Js-->
+     <div class="modal fade" id="nodejs">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="fs-4">Details:</div>
+                    <button class="btn btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <dl class="row">
+                        <dt class="col-3" style="color: rgb(19, 117, 117);">Course :</dt>
+                        <dd class="col-9" style="color: rgb(133, 109, 77);">Node Js</dd>
+                        <dt class="col-3" style="color: rgb(19, 117, 117);">Faculty :</dt>
+                        <dd class="col-9" style="color: rgb(133, 109, 77);">Samba sir</dd>
+                        <dt class="col-3" style="color: rgb(19, 117, 117);">Duration :</dt>
+                        <dd class="col-9" style="color: rgb(133, 109, 77);">45 days</dd>
+                        <dt class="col-3" style="color: rgb(19, 117, 117);">Timings :</dt>
+                        <dd class="col-9" style="color: rgb(133, 109, 77);">09:30 AM</dd>
+                        <dt class="col-3" style="color: rgb(19, 117, 117);">Description :</dt>
+                        <dd class="col-9" style="line-height: 30px; color: rgb(133, 109, 77);">Node.js connects the ease of a scripting language (JavaScript) with the power of Unix network programming. Node.js was built on the Google V8 JavaScript engine since it was open-sourced under the BSD license.
+                        </dd>
+                    </dl>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-warning text-white" data-bs-dismiss="modal"><span class="bi bi-x"></span> Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+     <!--Modal for Java-->
+     <div class="modal fade" id="java">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="fs-4">Details:</div>
+                    <button class="btn btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <dl class="row">
+                        <dt class="col-3" style="color: rgb(19, 117, 117);">Course :</dt>
+                        <dd class="col-9" style="color: rgb(133, 109, 77);">Java</dd>
+                        <dt class="col-3" style="color: rgb(19, 117, 117);">Faculty :</dt>
+                        <dd class="col-9" style="color: rgb(133, 109, 77);">Hari krishna sir</dd>
+                        <dt class="col-3" style="color: rgb(19, 117, 117);">Duration :</dt>
+                        <dd class="col-9" style="color: rgb(133, 109, 77);">60 days</dd>
+                        <dt class="col-3" style="color: rgb(19, 117, 117);">Timings :</dt>
+                        <dd class="col-9" style="color: rgb(133, 109, 77);">04:30 PM</dd>
+                        <dt class="col-3" style="color: rgb(19, 117, 117);">Description :</dt>
+                        <dd class="col-9" style="line-height: 30px; color: rgb(133, 109, 77);">Java is an object-oriented programming language developed by Sun Microsystems, and it was released in 1995. ... Java Virtual Machine (JVM) executes Java code, but it has been written in platform-specific languages such as C/C++/ASM, etc.
+                    </dl>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-warning text-white" data-bs-dismiss="modal"><span class="bi bi-x"></span> Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+  <!--footer-start-->
+  <footer class="bg-secondary text-light">
+    <h3 class="text-center m-4 p-4">Naresh Technologies</h3>
+    <div class="contact-details">
+        <div>
+            <ul>
+                <li><span class="bi bi-facebook"></span> Facebook</li>
+                <li><span class="bi bi-google"></span> Google</li>
+                <li><span class="bi bi-twitter"></span> Twitter</li>
+                <li><span class="bi bi-youtube"></span> Youtube</li>
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Service</li>
+                <li>Contact</li>
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <li><b>Name: </b>Naresh Institute</li>
+                <li><b>Email: </b>info@nareshit.com</li>
+                <li><b>Contact: </b>+91_xxxxxxxxx</li>
+                <li><b>Address: </b>Ameerpet, Hyderabad, Telangana</li>
+            </ul>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

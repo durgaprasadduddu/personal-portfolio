@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <title>Login</title>
+    <link rel="stylesheet" href="./style.css">
+     <style>
+        input:invalid~span {
+    background-color: red;
+    color: white;
+    }
+    input:valid~span{
+    background-color: green;
+    color: white;
+    }
+     </style>
+</head>
+<body>
+
+    <h1 class="text-center m-4">Naresh Institute and Technologies</h1>
+    <!--Navbar-->
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark my-4 mx-3 rounded">
+
+        <button class="navbar-toggler col-1" data-bs-toggle="collapse" data-bs-target="#navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse row" id="navigation">
+            <ul class="nav navbar-nav navbar-left ms-4">
+                <li class="nav-item"><a class="nav-link bi bi-house-door-fill ms-4" href="./index.html"> Home</a></li>
+                <li class="nav-item"> <a class="nav-link bi bi-question-octagon-fill ms-4" href="./about.html"> About</a></li>
+                <li class="nav-item"><a class="nav-link bi bi-journal-code ms-4" href="./service.html"> Service</a></li>
+                <li class="nav-item"><a class="nav-link bi bi-phone ms-4" href="./contact.html"> Contact Us</a></li>
+            </ul>
+        </div>
+        <!--Dropdown-->
+        <div class="dropdown me-2" id="drop">
+            <button class="btn text-white dropdown-toggle" data-bs-toggle="dropdown">
+                <span class="bi bi-box-arrow-in-right"></span> Sign in</button>
+            <ul class="dropdown-menu" id="drop-items">
+                <li class="dropdown-item"><a href="./login.html" class="nav-link">
+                    <span class="bi bi-box-arrow-in-right"></span> Sign in</a></li>
+                <li class="dropdown-item"><a href="./register.html" class="nav-link">
+                    <span class="bi bi-person-add"></span> Sign Up</a></li>
+                <li class="dropdown-item"><a href="./password.html" class="nav-link">
+                    <span class="bi bi-lock"></span> Change Password</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="d-flex justify-content-center">
+        <form class="p-4 m-4 bg-light float-start border rounded" style="width: 400px;">
+           <div class="fs-4 fw-bold text-center mb-4 mt-2">
+            Please Login Your Account
+           </div>
+           <div class="mb-4 mt-4">
+            <label class="form-label fw-bold" for="email">Email :</label>
+                <div class="input-group">
+                    <span class="bi bi-person input-group-text"></span>
+                    <input type="email" class="form-control" required>
+                    <span class="bi-person-check input-group-text"></span>
+                </div>
+           </div>
+
+           <div class="mb-4">
+            <label class="form-label fw-bold" for="email">Password :</label>
+                <div class="input-group">
+                    <span class="bi bi-key-fill input-group-text"></span>
+                    <input type="password" pattern="(?=.*[A-Z])(?=.*[0-9](?=.*[@#$!%])[\w\W]{8,16})" class="form-control" required>
+                    <span class="bi-check input-group-text"></span>
+                </div>
+                <div class="mt-2">
+                   <a href="./password.html" class="text-decoration-none"> Forget Password</a>
+                </div>
+           </div>
+
+           <div class="d-flex justify-content-around mt-4">
+            <button class="btn btn-warning text-white"> <a href="./register.html" class="nav-link bi bi-person-add"> Sign Up</a></button>
+            <button class="bi bi bi-box-arrow-in-right btn btn-success"> Log In</button>
+           </div>
+        </form>
+    </section>
+
+      <!--footer-start-->
+      <footer class="bg-secondary text-light">
+        <h3 class="text-center m-4 p-4">Naresh Technologies</h3>
+        <div class="contact-details">
+            <div>
+                <ul>
+                    <li><span class="bi bi-facebook"></span> Facebook</li>
+                    <li><span class="bi bi-google"></span> Google</li>
+                    <li><span class="bi bi-twitter"></span> Twitter</li>
+                    <li><span class="bi bi-youtube"></span> Youtube</li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Service</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li><b>Name: </b>Naresh Institute</li>
+                    <li><b>Email: </b>info@nareshit.com</li>
+                    <li><b>Contact: </b>+91_xxxxxxxxx</li>
+                    <li><b>Address: </b>Ameerpet, Hyderabad, Telangana</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
